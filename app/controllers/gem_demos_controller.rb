@@ -1,6 +1,17 @@
 class GemDemosController < ApplicationController
   before_action :demo, only: [:show, :edit, :update, :destroy]
-  
+
+  def form_populator
+    first_name = Faker::Name.first_name
+    last_name = Faker::Name.last_name
+    birth_date = Faker::Date.backward(14)
+    address = Faker::Address.street_address
+    city = Faker::Address.city
+    state = Faker::Address.state
+    zip = Faker::Address.zip
+    render json: {first_name: first_name, last_name: last_name, birth_date: birth_date, address: address, city: city, state: state, zip: zip}
+  end
+
   def index
     @gem_demo = GemDemo.all
   end
@@ -46,5 +57,7 @@ class GemDemosController < ApplicationController
   def demo
     @gem_demo = GemDemo.find(params[:id])
   end
+
+
 
 end

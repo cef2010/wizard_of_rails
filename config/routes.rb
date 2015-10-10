@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get 'ar/has_many_through', as: :ar_hm_through
   get 'ar/belongs_to', as: :ar_belongs_to
   get 'ar/home', as: :ar_home
+  get 'populator', to: 'gem_demos#form_populator'
   #root
   root to: 'static_pages#home'
 

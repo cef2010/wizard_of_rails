@@ -15,7 +15,7 @@
  */
  @import "materialize/components/color";
  $primary-color: color("grey", "darken-2") !default;
- $secondary-color: color("red") !default;
+ $secondary-color: color("red", "darken-1") !default;
  @import 'materialize';
 
  header, main, footer {

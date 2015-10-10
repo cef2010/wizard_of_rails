@@ -3,13 +3,16 @@
     %h1.center
       Learn about Has_Many_Through Associations!
   %hr
-    %p
+    %p.hmt-intro.hide
       An association that is used commonly is a has many through association. In the following example, #{@couple.name} have many vendors; One of which is #{@vendor.name}. Notice that in the second set of tables. #{@vendor.name} is the vendor this time. #{@vendor.name} also happens to have #{@couple.name} as a couple as well. This is made possible through a third table(model) named "Contracts". The function of the third table is to function as a through table with the same id's. In essence, one could simply call "Couple.find(1).vendors".
   %hr
-    .container
+    .center
+      %a.hmt-reveal.centerwaves-effect.waves-light.btn-large
+        %i.material-icons.left> games
+        Click for awesomeness
       .row
         .col.s12.m6
-          %table.bordered
+          %table.hmt-couple.bordered.hide
             %thead
               %tr
                 %th{"data-field" => "Couple Id"} Couple Id
@@ -24,7 +27,7 @@
                   %td
                     = @couple.wedding_date
         .col.s12.m6
-          %table.bordered
+          %table.hmt-vendor.bordered.hide
             %thead
               %tr
                 %th{"data-field" => "Vendor Id"} Vendor Id
@@ -41,10 +44,9 @@
                       = vendor.function
                     %tr
 
-    .container
       .row
         .col.s12.m6
-          %table.bordered
+          %table.hmt-vendor.bordered.hide
             %thead
               %tr
                 %th{"data-field" => "Vendor Id"} Vendor Id
@@ -62,7 +64,7 @@
                   %td
                     = @vendor.function
         .col.s12.m6
-          %table.bordered
+          %table.hmt-couple.bordered.hide
             %thead
               %tr
                 %th{"data-field" => "Couple Id"} Couple Id
@@ -80,21 +82,19 @@
                     %tr
   %br
   %hr
-    .container
-      .row
-        .col.s12.m11
-          %h3.center
-            Contract Table
-        .row
-          .col.s12.m6.offset-m3
-            %table.bordered.center
-              %thead
+    .row
+      .col.s12.m12
+        %h3.contract-intro.center.hide
+          Contract Table
+        .col.s12.m8.offset-m2
+          %table.hmt-contract.bordered.hide
+            %thead
+              %tr
+                %th.center-align{"data-field" => "Vendor Id"} Vendor Id
+                %th.center-align{"data-field" => "Couple Id"} Couple id
+              %tbody
                 %tr
-                  %th{"data-field" => "Vendor Id"} Vendor Id
-                  %th{"data-field" => "Couple Id"} Couple id
-                %tbody
-                  %tr
-                    %td
-                      = @contract.vendor_id
-                    %td
-                      = @contract.couple_id
+                  %td.center-align
+                    = @contract.vendor_id
+                  %td.center-align
+                    = @contract.couple_id

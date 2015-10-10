@@ -3,13 +3,17 @@
     %h1.center
       Learn about Has_Many Associations!
   %hr
-    %p
+    %p.hm-intro.hide
       An association that is used commonly is a has many association. In the following example, #{@user.name} has many doctors. These include #{@doctor1.name} and #{@doctor2.name}. Notice that #{@user.name} user id is #{@user.id}. If we look at the Doctors Table, they have the same user id as the first table but different individual id's. This is how one "User" can have many Doctor's.
   %hr
+    .center
+      %a.hm-reveal.centerwaves-effect.waves-light.btn-large
+        %i.material-icons.left> games
+        Click for awesomeness
     .container
       .row
-        .col.s12.m6
-          %table
+        .col.s12.m5
+          %table.hm-user-table.hide
             %thead
               %tr
                 %th{"data-field" => "User Id"} User Id
@@ -24,8 +28,8 @@
                   %td
                     = @user.age
 
-        .col.s12.m6
-          %table
+        .col.s12.m7
+          %table.hm-doctor-table.hide
             %thead
               %tr
                 %th{"data-field" => "User Id"} User Id

@@ -3,14 +3,14 @@ class ArController < ApplicationController
   def home
   end
 
-  
+
   def has_one
     @user = HasOne1.first
     @business = HasOneB.first
   end
 
   def has_many
-    @user = Userhm.find(2)
+    @user = Userhm.find(1)
     @doctors = Doctor.all
     @doctor1 = Doctor.find(1)
     @doctor2 = Doctor.find(2)

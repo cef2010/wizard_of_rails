@@ -90,13 +90,37 @@
           %table.hmt-contract.bordered.hide
             %thead
               %tr
+                %th.center-align{"data-field" => "Contract Id"} Contract Id
                 %th.center-align{"data-field" => "Vendor Id"} Vendor Id
                 %th.center-align{"data-field" => "Couple Id"} Couple id
               %tbody
                 %tr
                   %td.center-align
-                    = @contract.vendor_id
+                    = 1
                   %td.center-align
-                    = @contract.couple_id
+                    = 1
+                  %td.center-align
+                    = 1
+                %tr
+                  %td.center-align
+                    = 2
+                  %td.center-align
+                    = 1
+                  %td.center-align
+                    = 2
+                %tr
+                  %td.center-align
+                    = 3
+                  %td.center-align
+                    = 1
+                  %td.center-align
+                    = 1
+                %tr
+                  %td.center-align
+                    = 4
+                  %td.center-align
+                    = 1
+                  %td.center-align
+                    = 2
 
-= link_to 'Back to Active Record Home', ar_home_path
+  = link_to 'Back to Active Record Home', ar_home_path

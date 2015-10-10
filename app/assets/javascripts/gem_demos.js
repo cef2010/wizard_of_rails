@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  $('.populate').click(function(){
+  $(document).on('click', '.populate', function(){
     $.ajax({
       url: '/populator',
       type: 'GET',

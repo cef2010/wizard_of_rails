@@ -1,5 +1,6 @@
 .container
-  %h1 Show View
+  .main_head
+    %h1 Show View
   %hr
   %ul
     %li - In this show view, you have access to a specific instance of the model, rather than the entire collection of objects represented by the whole database table.
@@ -11,5 +12,5 @@
     = @ac_demo.author
     %br
     = @ac_demo.text
-  %hr  
+  %hr
   = link_to 'Back', ac_demos_home_path

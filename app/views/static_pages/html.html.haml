@@ -1,6 +1,7 @@
 .container
-  %h2.center-align
-    HTML
+  .main_head
+    %h2.center-align
+      HTML
   %hr
   %p
     This portion is to explain how HTML works. HTML is a markup language used for structuring and presenting content on the World Wide Web. It was finalized, and published, on October 28th 2014 by the World Wide Web Consortium. This is the fifth revision of the HTML standard since the inception of the World Wide Web. HTML is known as Hyper Text Markup Language, which is the basic layout of a webpage including the title, text, forms, etc, etc.
@@ -16,45 +17,38 @@
       %th{"data-field" => "h3"} h3
       %th{"data-field" => "h4"} h4
       %th{"data-field" => "h5"} h5
-      %th{"data-field" => "h6"} h6
     %tbody
       %tr
         %td
           %p
-            ='<h1>Hello</h1>'
+            ='<h1>This</h1>'
         %td
           %p
-            ='<h2>This</h2>'
+            ='<h2>Text</h2>'
         %td
           %p
-            ='<h3>Text</h3>'
+            ='<h3>Is</h3>'
         %td
           %p
-            ='<h4>Is</h4>'
+            ='<h4>Getting</h4>'
         %td
           %p
-            ='<h5>Getting</h5>'
-        %td
-          %p
-            ='<h6>Smaller</h6>'
+            ='<h5>Smaller</h5>'
       %tr
         %td
           %h1
-            = 'hello'
-        %td
-          %h2
             = 'This'
         %td
-          %h3
+          %h2
             = 'Text'
         %td
-          %h4
+          %h3
             = 'Is'
         %td
-          %h5
+          %h4
             = 'Getting'
         %td
-          %h6
+          %h5
             = 'Smaller'
   %br
   %br

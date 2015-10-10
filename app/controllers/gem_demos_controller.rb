@@ -33,7 +33,7 @@ class GemDemosController < ApplicationController
   end
 
   def destroy
-    @gem_demo.destroy method: :delete
+    @gem_demo.destroy
     redirect_to gem_demos_path
   end
 

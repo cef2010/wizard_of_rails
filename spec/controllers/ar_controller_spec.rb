@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe ArController, type: :controller do
+let(:ar){FactoryGirl.create(:ar)}
 
   describe "GET #has_one" do
     it "returns http success" do

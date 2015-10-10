@@ -1,14 +1,11 @@
 class AcDemosController < ApplicationController
+  before_action :demo, only: [:show, :edit, :update, :destroy]
   def home
     @ac_demos = AcDemo.all
   end
 
   def index
     @ac_demos = AcDemo.all
-  end
-
-  def show
-    @ac_demo = AcDemo.find(params[:id])
   end
 
   def new
@@ -20,31 +17,37 @@ class AcDemosController < ApplicationController
     if @ac_demo.save
       redirect_to ac_demos_path
     else
-      render :new
+      render 'new'
     end
   end
 
+  def show
+  end
+
   def edit
-    @ac_demo = AcDemo.find(params[:id])
   end
 
   def update
-    @ac_demo = AcDemo.find(params[:id])
     if @ac_demo.update(ac_demo_params)
-      redirect_to ac_demo_path(@ac_demo.id)
+      redirect_to ac_demos_path
     else
-      render :edit
+      render 'edit'
     end
   end
 
   def destroy
-    @ac_demo = AcDemo.find(params[:id])
     @ac_demo.destroy
     redirect_to ac_demos_path
   end
 
   private
+
     def ac_demo_params
       params.require(:ac_demo).permit(:title, :text, :author)
     end
+
+    def demo
+      @ac_demo = AcDemo.find(params[:id])
+    end
+
 end

@@ -4,11 +4,11 @@ Rails.application.routes.draw do
   get 'static_pages/js'
   get 'static_pages/development'
   get 'ac_demos/home'
-  get 'ar/has_one'
-  get 'ar/has_many'
-  get 'ar/has_many_through'
-  get 'ar/belongs_to'
-  get 'ar/home'
+  get 'ar/has_one', as: :ar_one
+  get 'ar/has_many', as: :ar_hm
+  get 'ar/has_many_through', as: :ar_hm_through
+  get 'ar/belongs_to', as: :ar_belongs_to
+  get 'ar/home', as: :ar_home
   #root
   root to: 'static_pages#home'
 

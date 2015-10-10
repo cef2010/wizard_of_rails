@@ -1,0 +1,97 @@
+.container
+  %h1 Learn How the Action Controller Works!
+  %hr
+  %ul
+    %li - Rails uses a controller base called the Action Controller to route users to views and to manipulate the database in order to populate said views.
+    %li - A controller inherits characteristics from the Action Controller.
+    %li - Inside a controller, database information is often gathered and stored in variables, which is then used in the view presented to the user.
+    %li - One of the most common uses of methods in a controller is CRUD actions: Creating, Reading, Updating, and Destroying data.
+    %li - Try clicking the method names in the sample controller.rb file below to learn more about some basic controller actions!
+  %hr
+
+  %p
+    def
+    = link_to 'index', ac_demos_path
+    %br
+    @posts = Post.all
+    %br
+    end
+    %br
+    %br
+    - if @ac_demos.any?
+      def
+      = link_to 'show', ac_demo_path(@ac_demos.first)
+      %br
+      @post = Post.find(params[:id])
+      %br
+      end
+      %br
+      %br
+    def
+    = link_to 'new', new_ac_demo_path
+    %br
+    @post = Post.new
+    %br
+    end
+    %br
+    %br
+    def create
+    %br
+    @post = Post.new(post_params)
+    %br
+    if @post.save
+    %br
+    redirect_to posts_path
+    %br
+    else
+    %br
+    render :new
+    %br
+    end
+    %br
+    %br
+    - if @ac_demos.any?
+      def
+      = link_to 'edit', edit_ac_demo_path(@ac_demos.last)
+      %br
+      @post = Post.find(params[:id])
+      %br
+      end
+      %br
+      %br
+      def @update
+      %br
+      @post = Post.find(params[:id])
+      %br
+      if @post.update(post_params)
+      %br
+      redirect_to posts_path
+      %br
+      else
+      %br
+      render :edit
+      %br
+      end
+      %br
+      %br
+      def
+      = link_to 'destroy', ac_demo_path(@ac_demos.last), method: :delete, data: {confirm: "Delete?"}
+      %br
+      @post = Post.find(params[:id])
+      %br
+      @post.destroy
+      %br
+      end
+      %br
+      %br
+    private
+    %br
+    %br
+    def poat_params
+    %br
+    params.require(:post).permit(:title, :author, :text)
+    %br
+    end
+    %br
+    %br
+  %br

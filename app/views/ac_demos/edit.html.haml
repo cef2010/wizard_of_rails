@@ -1,0 +1,6 @@
+.container
+  %h1 Edit Entry: #{@ac_demo.title}!
+  %hr
+  = render(partial: 'form')
+  %hr
+  = link_to 'Back', ac_demos_home_path

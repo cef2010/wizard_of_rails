@@ -1,0 +1,21 @@
+.container
+  %h1 Index View
+  %hr
+  %ul
+    %li - In this index view, you have access to the entire database table from a variable set in the index method of the controller.
+    %li - This variable, which contains every row from the model, can be iterated over to populate the index view with content and links to row specific paths.
+  %hr
+  - if @ac_demos.any?
+    %ul
+      - @ac_demos.each do |demo|
+        %li
+          = demo.title
+          = link_to '@show', ac_demo_path(demo)
+          = link_to '@edit', edit_ac_demo_path(demo)
+          = link_to '@destroy', ac_demo_path(demo), method: :delete, data: {confirm: "Delete?"}
+  - else
+    %h4 There isn't any content here yet! Head to @new to create some!
+  %hr
+  = link_to '@new', new_ac_demo_path
+  |
+  = link_to 'Back', ac_demos_home_path

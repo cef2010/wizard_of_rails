@@ -16,6 +16,14 @@ ActiveRecord::Schema.define(version: 20151010160725) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "ac_demos", force: :cascade do |t|
+    t.string   "title"
+    t.text     "text"
+    t.string   "author"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "gem_demos", force: :cascade do |t|
     t.string   "first_name"
     t.string   "last_name"

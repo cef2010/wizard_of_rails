@@ -1,0 +1,9 @@
+= form_for @ac_demo do |f|
+  = f.label :title, class: 'active'
+  = f.text_field :title, placeholder: 'This is a text field!'
+  = f.label :author, class: 'active'
+  = f.text_field :author, placeholder: 'Another text field!'
+  = f.label :text, class: 'active'
+  = f.text_field :text, placeholder: 'This is a text area, a user can use this to type larger bodies of text. Its even resizable!'
+
+  =f.submit 'Submit'

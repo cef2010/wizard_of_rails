@@ -2,16 +2,12 @@
   %h2.center-align
     HTML & CSS
   %hr
-  %p.center-align.container
+  %p
     This portion is to explain how HTML and CSS work together. HTML is a markup language used for structuring and presenting content on the World Wide Web. It was finalized, and published, on October 28th 2014 by the World Wide Web Consortium. This is the fifth revision of the HTML standard since the inception of the World Wide Web. HTML is known as Hyper Text Markup Language, which is the basic layout of a webpage including the title, text, forms, etc, etc. CSS stands for Casscading Style Sheets which is the styling of a webpage, such as the colors, font-type, font-size and so on. HTML and CSS go hand in hand.
-  %br
-  %br
+  %hr
   %br
   %h4.center-align
     Header Tags
-  .container
-    .row
-      .col.s12.m6
   %table
     %thead
       %tr
@@ -26,31 +22,38 @@
         %td
           %p
             ='<h1>Hello</h1>'
-          %h1
-            = 'hello'
         %td
           %p
             ='<h2>This</h2>'
-          %h2
-            = 'This'
         %td
           %p
             ='<h3>Text</h3>'
-          %h3
-            = 'Text'
         %td
           %p
             ='<h4>Is</h4>'
-          %h4
-            = 'Is'
         %td
           %p
             ='<h5>Getting</h5>'
-          %h5
-            = 'Getting'
         %td
           %p
             ='<h6>Smaller</h6>'
+      %tr
+        %td
+          %h1
+            = 'hello'
+        %td
+          %h2
+            = 'This'
+        %td
+          %h3
+            = 'Text'
+        %td
+          %h4
+            = 'Is'
+        %td
+          %h5
+            = 'Getting'
+        %td
           %h6
             = 'Smaller'
   %br

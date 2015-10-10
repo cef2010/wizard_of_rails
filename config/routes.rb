@@ -4,14 +4,16 @@ Rails.application.routes.draw do
   get 'static_pages/js'
   get 'static_pages/development'
   get 'ac_demos/home'
-
+  get 'ar/has_one'
+  get 'ar/has_many'
+  get 'ar/has_many_through'
+  get 'ar/belongs_to'
   #root
   root to: 'static_pages#home'
 
   #CRUD
   resources :gem_demos
   resources :ac_demos
-git 
   # get '/home', to: 'static_pages/home', as: 'home'
   # get '/js', to: 'static_pages/ja', as: 'javascript'
   # get '/development', to: 'static_pages/development', as: 'development'

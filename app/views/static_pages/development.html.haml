@@ -1,4 +1,55 @@
-.container
-  %h1.center-align
-    Testing
-  %hr
+%h1.center-align
+  Testing
+%hr
+%br
+%br
+%h5.center-align
+  Why Test Your code ?
+%p.center-align.container It is important to test your code before pushing it up to production. Testing is vital and can fix future problems they may occur with your code. In rails we are going to mainly focus on testing with RSpec. RSpec is a ruby gem created to shorten testing and make it more simple to understand the syntax. Testing will make you a better developer and could land you a job if you know how to test your code. 
+%br
+  %h5.center-align
+    Testing with RSpec
+  %p.center-align.container
+    RSpec is a behavior driven framework for Ruby. RSpec can be used to test our models and controllers in isolation and scoped to their context. RSpec tests are written very closely to the english language to aid in readability and maintainability. You can look at an RSpec test and easily understand what it is testing and what the output should be. Testing Models with RSpec is the best place to start learning the RSpec syntax.  Models are the easiest to test and also provide the most core functionality to a Rails app.
+  %br  
+%h5.center-align
+  TDD vs BDD
+%h5.center-align.container
+  TDD (Test-Driven Development) 
+%hr.container  
+%ol.center-align  
+  %li.center-align.container
+    First the developer writes some tests.
+  %br  
+  %li.center-align.container
+    The developer then runs those tests which fail because none of those features are actually implemented.  
+  %br
+  %li.center-align.container
+    Next the developer actually implements those tests in code.
+  %br
+  %li.center-align.container
+    If the developer writes his code well, then the in next stage he will see his tests pass.    
+  %br
+  %li.center-align.container
+    The developer can then refactor his code, add comments, clean it up as he wishes because the developer knows that if the new code breaks something, then the tests will alert him by failing.
+  %br
+  %br
+  %h5.center-align.container
+    BDD (Behavior-Driven Development)
+  %hr.container  
+  %br
+  %ol.center-align
+    %li.center-align.container
+      The developer specifies what functions the site should have
+    %br
+    %li.center-align.container
+      The developer then writes tests based on what functions the site will have   
+    %br
+    %li.center-align.container
+      The developer will then run the tests to make sure the site functions the way it should 
+    %br
+    %br   
+
+
+
+

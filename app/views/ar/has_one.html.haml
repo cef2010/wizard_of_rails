@@ -1,0 +1,43 @@
+.container
+  %body
+    %h1.center
+      Learn about Has_one Associations!
+  %hr
+    %p
+      An association that is used on occasion is a has one association. In the following example, #{@user.name} has one business. Notice that #{@user.name}'s user id is #{@user.id}. In the business table, an attritube exists called user_id. This id matches #{@user.name}'s user id, so that when #{@user.name} created his business he took his user id with him. In active record, one could simply say User.find_by(name: 'joker').business.
+  %hr
+    .container
+      .row
+        .col.s12.m6
+          %table
+            %thead
+              %tr
+                %th{"data-field" => "User Id"} User Id
+                %th{"data-field" => "name"} Name
+                %th{"data-field" => "Address"} Address
+              %tbody
+                %tr
+                  %td
+                    = @user.id
+                  %td
+                    = @user.name
+                  %td
+                    = @user.address
+        .col.s12.m6
+          %table
+            %thead
+              %tr
+                %th{"data-field" => "User Id"} User Id
+                %th{"data-field" => "Business"} Business Id
+                %th{"data-field" => "name"} Name
+                %th{"data-field" => "Address"} Address
+              %tbody
+                %tr
+                  %td
+                    = @business.has_one1_id
+                  %td
+                    = @business.id
+                  %td
+                    = @business.name
+                  %td
+                    = @business.address

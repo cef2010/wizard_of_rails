@@ -1,0 +1,100 @@
+.container
+  %body
+    %h1.center
+      Learn about Has_Many_Through Associations!
+  %hr
+    %p
+      An association that is used commonly is a has many through association. In the following example, #{@couple.name} have many vendors; One of which is #{@vendor.name}. Notice that in the second set of tables. #{@vendor.name} is the vendor this time. #{@vendor.name} also happens to have #{@couple.name} as a couple as well. This is made possible through a third table(model) named "Contracts". The function of the third table is to function as a through table with the same id's. In essence, one could simply call "Couple.find(1).vendors".
+  %hr
+    .container
+      .row
+        .col.s12.m6
+          %table.bordered
+            %thead
+              %tr
+                %th{"data-field" => "Couple Id"} Couple Id
+                %th{"data-field" => "name"} Name
+                %th{"data-field" => "Wedding Date"} Wedding Date
+              %tbody
+                %tr
+                  %td
+                    = @couple.id
+                  %td
+                    = @couple.name
+                  %td
+                    = @couple.wedding_date
+        .col.s12.m6
+          %table.bordered
+            %thead
+              %tr
+                %th{"data-field" => "Vendor Id"} Vendor Id
+                %th{"data-field" => "Vendor Name"} Vendor name
+                %th{"data-field" => "Vendor function"} Vendor Type
+              %tbody
+                %tr
+                  - @vendors.each do|vendor|
+                    %td
+                      = vendor.id
+                    %td
+                      = vendor.name
+                    %td
+                      = vendor.function
+                    %tr
+
+    .container
+      .row
+        .col.s12.m6
+          %table.bordered
+            %thead
+              %tr
+                %th{"data-field" => "Vendor Id"} Vendor Id
+                %th{"data-field" => "Vendor Name"} Vendor Name
+                %th{"data-field" => "Vendor Location"} Vendor Location
+                %th{"data-field" => "Vendor function"} Vendor Type
+              %tbody
+                %tr
+                  %td
+                    = @vendor.id
+                  %td
+                    = @vendor.name
+                  %td
+                    = @vendor.location
+                  %td
+                    = @vendor.function
+        .col.s12.m6
+          %table.bordered
+            %thead
+              %tr
+                %th{"data-field" => "Couple Id"} Couple Id
+                %th{"data-field" => "Couple Name"} Couple Name
+                %th{"data-field" => "Couple Wedding Date"} Couple Wedding Date
+              %tbody
+                %tr
+                  - @couples.each do|couple|
+                    %td
+                      = couple.id
+                    %td
+                      = couple.name
+                    %td
+                      = couple.wedding_date
+                    %tr
+  %br
+  %hr
+    .container
+      .row
+        .col.s12.m11
+          %h3.center
+            Contract Table
+        .row
+          .col.s12.m6.offset-m3
+            %table.bordered.center
+              %thead
+                %tr
+                  %th{"data-field" => "Vendor Id"} Vendor Id
+                  %th{"data-field" => "Couple Id"} Couple id
+                %tbody
+                  %tr
+                    %td
+                      = @contract.vendor_id
+                    %td
+                      = @contract.couple_id

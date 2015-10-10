@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'ar/has_one'
+
+  get 'ar/has_many'
+
+  get 'ar/has_many_through'
+
+  get 'ar/belongs_to'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

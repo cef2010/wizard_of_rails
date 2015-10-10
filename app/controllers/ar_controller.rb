@@ -10,7 +10,7 @@ class ArController < ApplicationController
   end
 
   def has_many
-    @user = Userhm.find(2)
+    @user = Userhm.find(1)
     @doctors = Doctor.all
     @doctor1 = Doctor.find(1)
     @doctor2 = Doctor.find(2)

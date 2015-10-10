@@ -1,4 +1,9 @@
 class ArController < ApplicationController
+
+  def home
+  end
+
+  
   def has_one
     @user = HasOne1.first
     @business = HasOneB.first

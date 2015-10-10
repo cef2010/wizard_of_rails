@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'ar/has_many'
   get 'ar/has_many_through'
   get 'ar/belongs_to'
+  get 'ar/home'
   #root
   root to: 'static_pages#home'
 

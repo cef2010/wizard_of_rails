@@ -1,4 +1,57 @@
-%div.container
+
+%h2.center-align
+  HTML
+%hr.container
+%p.center-align.container
+  This portion is to explain how to use HTML and what it is. HTML is a markup language used for structuring and presenting content on the World Wide Web. It was finalized, and published, on October 28th 2014 by the World Wide Web Consortium. This is the fifth revision of the HTML standard since the inception of the World Wide Web. HTML is known as Hyper Text Markup Language, which is the basic layout of a webpage including the title, text, forms, etc, etc.
+%br
+%br
+%h4.center-align
+  Header Tags
+%table.container
+  %thead
+    %tr
+    %th{"data-field" => "h1"} h1
+    %th{"data-field" => "h2"} h2
+    %th{"data-field" => "h3"} h3
+    %th{"data-field" => "h4"} h4
+    %th{"data-field" => "h5"} h5
+    %th{"data-field" => "h6"} h6
+  %tbody
+    %tr
+      %td
+        %p
+          ='<h1>Hello</h1>'
+        %h1
+          = 'hello'
+      %td
+        %p
+          ='<h2>This</h2>'
+        %h2
+          = 'This'
+      %td
+        %p
+          ='<h3>Text</h3>'
+        %h3
+          = 'Text'
+      %td
+        %p
+          ='<h4>Is</h4>'
+        %h4
+          = 'Is'
+      %td
+        %p
+          ='<h5>Getting</h5>'
+        %h5
+          = 'Getting'
+      %td
+        %p
+          ='<h6>Smaller</h6>'
+        %h6
+          = 'Smaller'
+%br
+%br
+%br
 %h4.center-align
   Creating Content
 .container
@@ -104,4 +157,3 @@
           %p
             = 'This creates'
             = 'a line break'
-

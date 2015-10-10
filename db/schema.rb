@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151010160725) do
+ActiveRecord::Schema.define(version: 20151010164040) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,29 @@ ActiveRecord::Schema.define(version: 20151010160725) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "contracts", force: :cascade do |t|
+    t.integer  "couple_id"
+    t.integer  "vendor_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "couples", force: :cascade do |t|
+    t.string   "name"
+    t.string   "wedding_date"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  create_table "doctors", force: :cascade do |t|
+    t.string   "name"
+    t.string   "address"
+    t.string   "phone_number"
+    t.integer  "userhm_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
   create_table "gem_demos", force: :cascade do |t|
     t.string   "first_name"
     t.string   "last_name"
@@ -34,6 +57,39 @@ ActiveRecord::Schema.define(version: 20151010160725) do
     t.string   "zip"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "has_one1s", force: :cascade do |t|
+    t.string   "name"
+    t.text     "hacker"
+    t.string   "address"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "has_one_bs", force: :cascade do |t|
+    t.string   "name"
+    t.string   "company"
+    t.string   "address"
+    t.integer  "has_one1_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "userhms", force: :cascade do |t|
+    t.string   "name"
+    t.string   "address"
+    t.integer  "age"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "vendors", force: :cascade do |t|
+    t.string   "name"
+    t.string   "location"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "function"
   end
 
 end

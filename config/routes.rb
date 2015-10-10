@@ -1,17 +1,17 @@
 Rails.application.routes.draw do
-
-  get'static_pages/home'
-
+  #get routes
+  get'static_pages/html'
   get 'static_pages/js'
-
   get 'static_pages/development'
-
-  root to: 'static_pages#html'
-
-  resources :gem_demos
   get 'ac_demos/home'
-  resources :ac_demos
 
+  #root
+  root to: 'static_pages#home'
+
+  #CRUD
+  resources :gem_demos
+  resources :ac_demos
+git 
   # get '/home', to: 'static_pages/home', as: 'home'
   # get '/js', to: 'static_pages/ja', as: 'javascript'
   # get '/development', to: 'static_pages/development', as: 'development'

@@ -12,7 +12,7 @@ class GemDemosController < ApplicationController
   def create
     @gem_demo = GemDemo.new(gem_demo_params)
     if @gem_demo.save
-      redirect_to gem_demo_path
+      redirect_to gem_demos_path
     else
       render 'new'
     end
@@ -26,7 +26,7 @@ class GemDemosController < ApplicationController
 
   def update
     if @gem_demo.update(gem_demo_params)
-      redirect_to gem_demo_path
+      redirect_to gem_demos_path
     else
       render 'edit'
     end
@@ -34,7 +34,7 @@ class GemDemosController < ApplicationController
 
   def destroy
     @gem_demo.destroy method: :delete
-    redirect_to gem_demo_path
+    redirect_to gem_demos_path
   end
 
   private

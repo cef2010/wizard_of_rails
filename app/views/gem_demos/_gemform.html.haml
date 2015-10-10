@@ -1,9 +1,7 @@
-= link_to "my link", "", :onclick => "my_function(); return false"
-%p not sure if we want above or below...
-%a{href: '#', onclick: 'my_function(); return false;'} my link
+
 %br 
 
-= form_for :@gem_demo do |f|
+= form_for @gem_demo do |f|
   = f.label :first_name 
   = f.text_field :first_name 
 
@@ -25,5 +23,5 @@
   = f.label :zip 
   = f.text_field :zip
 
-  = f.submit 
+  = submit_tag 'Submit'
 %br 

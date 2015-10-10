@@ -11,7 +11,7 @@
         %i.material-icons.left> games
         Click for awesomeness
       .row
-        .col.s12.m6
+        .col.s12.m6.l6
           %table.h-one-user.hide
             %thead
               %tr
@@ -26,7 +26,7 @@
                     = @user.name
                   %td
                     = @user.address
-        .col.s12.m6
+        .col.s12.m6.l6
           %table.h-one-business.hide
             %thead
               %tr
@@ -44,3 +44,5 @@
                     = @business.name
                   %td
                     = @business.address
+
+= link_to 'Back to Active Record Home', ar_home_path

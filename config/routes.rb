@@ -1,11 +1,5 @@
 Rails.application.routes.draw do
-  get 'gem_demos/index'
-
-  get 'gem_demos/show'
-
-  get 'gem_demos/new'
-
-  get 'gem_demos/edit'
+  resources :gem_demos
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

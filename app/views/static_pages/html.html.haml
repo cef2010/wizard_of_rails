@@ -1,9 +1,10 @@
 %div.container
 %h2.center-align 
-  HTML & CSS
+  HTML
 %hr
+%br
 %p.center-align.container 
-  This portion is to explain how HTML and CSS work together. HTML is a markup language used for structuring and presenting content on the World Wide Web. It was finalized, and published, on October 28th 2014 by the World Wide Web Consortium. This is the fifth revision of the HTML standard since the inception of the World Wide Web. HTML is known as Hyper Text Markup Language, which is the basic layout of a webpage including the title, text, forms, etc, etc. CSS stands for Casscading Style Sheets which is the styling of a webpage, such as the colors, font-type, font-size and so on. HTML and CSS go hand in hand.
+  This portion is to explain how to use HTML and what HTML is. HTML is a markup language used for structuring and presenting content on the World Wide Web. It was finalized, and published, on October 28th 2014 by the World Wide Web Consortium. This is the fifth revision of the HTML standard since the inception of the World Wide Web. HTML is known as Hyper Text Markup Language, which is the basic layout of a webpage including the title, text, forms, etc, etc. 
 %br  
 %br
 %br
@@ -56,8 +57,11 @@
 %br  
 %br
 %br
-%h4.center-align.container.row.col.s12.m6
+%h4.center-align
   Creating Content
+.container
+  .row
+    .col.s12.m6  
 %table
   %thead
     %tr
@@ -97,9 +101,56 @@
           ='This creates<br>a line break</br>'
         %p
           = 'This creates'
+        %p  
           = 'a line break'     
-
-
+%br
+%br
+/ %h4.center-align
+/   CSS Styling
+/ .container
+/   .row
+/     .col.s12.m6  
+/ %table
+/   %thead
+/     %tr
+/     %th{"data-field" => "text color"} Adding Text Color
+/     %th{"data-field" => "font size"} Change Font Size
+/     %th{"data-field" => "change font type"} Change Font Type
+/     %th{"data-field" => "background color"} Background Color
+/     %th{"data-field" => "br"} Line break
+/   %tbody  
+/     %tr 
+/       %td
+/         %p 
+/           =''
+/         %p
+/           = ''      
+/       %td
+/         %p 
+/           =''
+/         %p
+/           or  
+/         %p 
+/           =''  
+/         %b
+/           = ''      
+/       %td
+/         %p 
+/           =''
+/         %u
+/           = ''      
+/       %td
+/         %p 
+/           =''
+/         %i
+/           = ''      
+/       %td
+/         %p 
+/           =''
+/         %p
+/           = ''
+/         %p  
+/           = ''     
 
 
 

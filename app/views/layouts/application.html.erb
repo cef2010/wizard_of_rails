@@ -4,11 +4,15 @@
   <title>WizardOfRails</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <%= csrf_meta_tags %>
 </head>
 <body>
-<%= render 'layouts/navbar' %>
-<%= yield %>
-
+  <header>
+    <%= render 'layouts/navbar' %>
+  </header>
+  <main>
+    <%= yield %>
+  </main>
 </body>
 </html>

@@ -1,13 +1,30 @@
-/ %ul#slide-out.side-nav.fixed
-/  %a.button-collapse{"data-activates" => "mobile-demo", :href => "#"}
-/   %i.material-icons menu  
-/  %li.container
-/   = link_to "Home", static_pages_home_path  
-/  %li.container
-/   = link_to "HTML & CSS", root_path
-/  %li.container
-/   = link_to "Javascript, Jquery, & Ajax",  static_pages_js_path
-/  %li.container
-/   = link_to "Testing", static_pages_development_path
- 
- 
+.nav-wrapper
+  %ul.side-nav.fixed.hide-on-med-and-down
+    %li
+      = link_to "Home", root_path
+    %li
+      = link_to "HTML & CSS", static_pages_html_path
+    %li
+      = link_to "Testing", static_pages_development_path
+    %li
+      = link_to "Active Record", ar_home_path
+    %li
+      = link_to "Action Controller", ac_demos_home_path
+    %li
+      = link_to "Gems", gem_demos_path
+  %a.hide-on-large-only.button-collapse{"data-activates" => "mobile-demo", :href => "#", style: 'color: black'}
+    %i.material-icons
+      menu
+  %ul#mobile-demo.side-nav
+    %li
+      = link_to "Home", root_path
+    %li
+      = link_to "HTML & CSS", static_pages_html_path
+    %li
+      = link_to "Testing", static_pages_development_path
+    %li
+      = link_to "Active Record", ar_home_path
+    %li
+      = link_to "Action Controller", ac_demos_home_path
+    %li
+      = link_to "Gems", gem_demos_path

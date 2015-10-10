@@ -1,7 +1,7 @@
 require 'simplecov'
 SimpleCov.start
 ​
-require ‘factory_girl_rails’
+require 'factory_girl_rails'
 ​
 ​
 ENV['RAILS_ENV'] ||= 'test'

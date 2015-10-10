@@ -1,105 +1,100 @@
-%div.container
-%h2.center-align 
-  HTML & CSS
-%hr
-%p.center-align.container 
-  This portion is to explain how HTML and CSS work together. HTML is a markup language used for structuring and presenting content on the World Wide Web. It was finalized, and published, on October 28th 2014 by the World Wide Web Consortium. This is the fifth revision of the HTML standard since the inception of the World Wide Web. HTML is known as Hyper Text Markup Language, which is the basic layout of a webpage including the title, text, forms, etc, etc. CSS stands for Casscading Style Sheets which is the styling of a webpage, such as the colors, font-type, font-size and so on. HTML and CSS go hand in hand.
-%br  
-%br
-%br
-%h4.center-align
-  Header Tags
 .container
-  .row
-    .col.s12.m6
-%table
-  %thead
-    %tr
-    %th{"data-field" => "h1"} h1
-    %th{"data-field" => "h2"} h2
-    %th{"data-field" => "h3"} h3
-    %th{"data-field" => "h4"} h4
-    %th{"data-field" => "h5"} h5
-    %th{"data-field" => "h6"} h6
-  %tbody  
-    %tr 
-      %td
-        %p 
-          ='<h1>Hello</h1>'
-        %h1
-          = 'hello'      
-      %td
-        %p 
-          ='<h2>This</h2>'
-        %h2
-          = 'This'      
-      %td
-        %p 
-          ='<h3>Text</h3>'
-        %h3
-          = 'Text'      
-      %td
-        %p 
-          ='<h4>Is</h4>'
-        %h4
-          = 'Is'      
-      %td
-        %p 
-          ='<h5>Getting</h5>'
-        %h5
-          = 'Getting'     
-      %td
-        %p 
-          ='<h6>Smaller</h6>'
-        %h6
-          = 'Smaller'
-%br  
-%br
-%br
-%h4.center-align.container.row.col.s12.m6
-  Creating Content
-%table
-  %thead
-    %tr
-    %th{"data-field" => "p"} Paragraph Tag 
-    %th{"data-field" => "bold"} Bold Text
-    %th{"data-field" => "underline"} Underline Text
-    %th{"data-field" => "italics"} Italic Text 
-    %th{"data-field" => "br"} Line break
-  %tbody  
-    %tr 
-      %td
-        %p 
-          ='<p>The paragraph tag allows you to create content.</p>'
-        %p
-          = 'The paragraph tag allows you to create content.'      
-      %td
-        %p 
-          ='<strong>bold text<strong>'
-        %p
-          or  
-        %p 
-          ='<b>bold text</b>'  
-        %b
-          = 'Bold Text'      
-      %td
-        %p 
-          ='<u>This text is underlined</u>'
-        %u
-          = 'This text is underlined'      
-      %td
-        %p 
-          ='<i>This is in Italics</i>'
-        %i
-          = 'This is in Italics'      
-      %td
-        %p 
-          ='This creates<br>a line break</br>'
-        %p
-          = 'This creates'
-          = 'a line break'     
-
-
-
-
-
+  %h2.center-align 
+    HTML & CSS
+  %hr
+  %p.center-align.container
+    This portion is to explain how HTML and CSS work together. HTML is a markup language used for structuring and presenting content on the World Wide Web. It was finalized, and published, on October 28th 2014 by the World Wide Web Consortium. This is the fifth revision of the HTML standard since the inception of the World Wide Web. HTML is known as Hyper Text Markup Language, which is the basic layout of a webpage including the title, text, forms, etc, etc. CSS stands for Casscading Style Sheets which is the styling of a webpage, such as the colors, font-type, font-size and so on. HTML and CSS go hand in hand.
+  %br
+  %br
+  %br
+  %h4.center-align
+    Header Tags
+  .container
+    .row
+      .col.s12.m6
+  %table
+    %thead
+      %tr
+      %th{"data-field" => "h1"} h1
+      %th{"data-field" => "h2"} h2
+      %th{"data-field" => "h3"} h3
+      %th{"data-field" => "h4"} h4
+      %th{"data-field" => "h5"} h5
+      %th{"data-field" => "h6"} h6
+    %tbody
+      %tr
+        %td
+          %p
+            ='<h1>Hello</h1>'
+          %h1
+            = 'hello'
+        %td
+          %p
+            ='<h2>This</h2>'
+          %h2
+            = 'This'
+        %td
+          %p
+            ='<h3>Text</h3>'
+          %h3
+            = 'Text'
+        %td
+          %p
+            ='<h4>Is</h4>'
+          %h4
+            = 'Is'
+        %td
+          %p
+            ='<h5>Getting</h5>'
+          %h5
+            = 'Getting'
+        %td
+          %p
+            ='<h6>Smaller</h6>'
+          %h6
+            = 'Smaller'
+  %br
+  %br
+  %br
+  %h4.center-align.container.row.col.s12.m6
+    Creating Content
+  %table
+    %thead
+      %tr
+      %th{"data-field" => "p"} Paragraph Tag
+      %th{"data-field" => "bold"} Bold Text
+      %th{"data-field" => "underline"} Underline Text
+      %th{"data-field" => "italics"} Italic Text
+      %th{"data-field" => "br"} Line break
+    %tbody
+      %tr
+        %td
+          %p
+            ='<p>The paragraph tag allows you to create content.</p>'
+          %p
+            = 'The paragraph tag allows you to create content.'
+        %td
+          %p
+            ='<strong>bold text<strong>'
+          %p
+            or
+          %p
+            ='<b>bold text</b>'
+          %b
+            = 'Bold Text'
+        %td
+          %p
+            ='<u>This text is underlined</u>'
+          %u
+            = 'This text is underlined'
+        %td
+          %p
+            ='<i>This is in Italics</i>'
+          %i
+            = 'This is in Italics'
+        %td
+          %p
+            ='This creates<br>a line break</br>'
+          %p
+            = 'This creates'
+            = 'a line break'

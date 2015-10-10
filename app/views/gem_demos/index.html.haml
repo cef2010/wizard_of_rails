@@ -1,0 +1,17 @@
+.container 
+  %h1 Some Cool Gems
+  %p how to do some cool things with them here
+  = render 'gemactions'
+  %br
+  = @gem_demo.each do |demo|
+    .div.col.s12.m4
+      .div.card.small.white
+        .div.black.text
+          .span.card-title.amber-text.text-accent-3 = demo.first_name 's Info:
+          %p First Name: = demo.first_name
+          %p Last Name: = demo.last_name
+          %p Description: = demo.address
+          %p Gender: = demo.zip
+          .div.card-action.center.blue.darken-2
+            %p#show-user.btn.tooltipped{"data-position" => "right"}{"data-delay"=>'50'}{"data-tooltip"=>'Click to interact with = user.first_name'}= link_to 'User\'s profile', user_path(user)
+= render 'gempagelinks'

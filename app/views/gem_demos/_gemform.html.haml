@@ -1,0 +1,27 @@
+
+%br 
+
+= form_for @gem_demo do |f|
+  = f.label :first_name 
+  = f.text_field :first_name 
+
+  = f.label :last_name 
+  = f.text_field :last_name
+
+  = f.label :birthdate 
+  = f.text_field :birthdate 
+
+  = f.label :address
+  = f.text_field :address
+
+  = f.label :city 
+  = f.text_field :city 
+
+  = f.label :state 
+  = f.text_field :state
+
+  = f.label :zip 
+  = f.text_field :zip
+
+  = submit_tag 'Submit'
+%br 

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   get'static_pages/home'
 
   get 'static_pages/js'
@@ -6,6 +7,8 @@ Rails.application.routes.draw do
   get 'static_pages/development'
 
   root to: 'static_pages#html'
+
+  resources :gem_demos
 
   # get '/home', to: 'static_pages/home', as: 'home'
   # get '/js', to: 'static_pages/ja', as: 'javascript'

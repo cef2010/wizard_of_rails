@@ -1,0 +1,61 @@
+%div.container
+%h2.center-align 
+  HTML & CSS
+%hr
+%p.center-align
+  This portion is to explain how HTML and CSS work together. HTML is a markup language used for structuring and presenting content on the World Wide Web. It was finalized, and published, on October 28th 2014 by the World Wide Web Consortium. This is the fifth revision of the HTML standard since the inception of the World Wide Web. HTML is known as Hyper Text Markup Language, which is the basic layout of a webpage including the title, text, forms, etc, etc. CSS stands for Casscading Style Sheets which is the styling of a webpage, such as the colors, font-type, font-size and so on. HTML and CSS go hand in hand.
+
+%hr  
+%h4.center-align
+  Header Tags
+.container
+  .row
+    .col.s12.m6
+%hr 
+%table
+  %thead
+    %tr
+    %th{"data-field" => "h1"} h1
+    %th{"data-field" => "h2"} h2
+    %th{"data-field" => "h3"} h3
+    %th{"data-field" => "h4"} h4
+    %th{"data-field" => "h5"} h5
+    %th{"data-field" => "h6"} h6
+  %tbody  
+    %tr 
+      %td
+        %p 
+          ='<h1>Hello</h1>'
+        %h1
+          = 'hello'      
+      %td
+        %p 
+          ='<h1>This</h1>'
+        %h2
+          = 'This'      
+      %td
+        %p 
+          ='<h1>Text</h1>'
+        %h3
+          = 'Text'      
+      %td
+        %p 
+          ='<h1>Is</h1>'
+        %h4
+          = 'Is'      
+      %td
+        %p 
+          ='<h1>Getting</h1>'
+        %h5
+          = 'Getting'     
+      %td
+        %p 
+          ='<h1>Smaller</h1>'
+        %h6
+          = 'Smaller'
+
+
+
+
+
+

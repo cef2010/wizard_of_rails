@@ -1,4 +1,18 @@
 Rails.application.routes.draw do
+  get'static_pages/home'
+
+  get 'static_pages/js'
+
+  get 'static_pages/development'
+
+  root to: 'static_pages#html'
+
+  # get '/home', to: 'static_pages/home', as: 'home'
+  # get '/js', to: 'static_pages/ja', as: 'javascript'
+  # get '/development', to: 'static_pages/development', as: 'development'
+  # root to: '/html', to: 'static_pages#html', as: 'html'
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

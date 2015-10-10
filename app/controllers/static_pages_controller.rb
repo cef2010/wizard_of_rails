@@ -2,9 +2,6 @@ class StaticPagesController < ApplicationController
   def home
   end
 
-  def js
-  end
-
   def development
   end
 
